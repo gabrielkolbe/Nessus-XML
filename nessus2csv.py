@@ -1,9 +1,17 @@
-#!/usr/bin/python
+#!C:/Users/Gabriel/AppData/Local/Programs/Python/Python37-32/python.exe
+# on windows machine
+print ("Content-Type: text/html\n")
+# to run in browser on xampp
 
 from sys import argv
 import xml.etree.ElementTree as ET
 
-tree = ET.parse(argv[1])
+f = open('nessus.xml', 'r')
+xml_content = f.read()
+f.close()
+
+tree = ET.fromstring(xml_content)
+#tree = ET.parse(xml_content)
 
 # XML structure:
 # 
